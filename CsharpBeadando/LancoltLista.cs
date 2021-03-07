@@ -5,20 +5,31 @@ using System.Text;
 
 namespace CsharpBeadando
 {
-    class Teendok<T> : IEnumerable
+    class LancoltLista<T> : IEnumerable
     {
         //a teendők tárolása LinkedList-ben
         private LinkedList<T> lista;
 
-        //üres konstruktor
-        public Teendok()
+        //konstruktor inicializál
+        public LancoltLista()
         {
             lista = new LinkedList<T>();
         }
 
+        //GetEnumerator
         public IEnumerator GetEnumerator()
         {
             return ((IEnumerable)lista).GetEnumerator();
+        }
+
+        //listában van-e az adott elem?
+        public bool BenneVan(T adat)
+        {
+            if (lista.Contains(adat))
+            {
+                return true;
+            }
+            return false;
         }
 
         //teendő listához (végéhez) adása
@@ -27,13 +38,14 @@ namespace CsharpBeadando
             foreach (var adat in adatok)
             {
                 //csak akkor adjuk hozzá, ha még nem volt benne a listában
-                if (lista.Contains(adat))
+                if (BenneVan(adat))
                 {
                     continue;
                 }
                 lista.AddLast(adat);
             }
         }
+
         //teendő listához (elejéhez) adása
         public void ElejehezAd(params T[] adatok)
         {
@@ -41,7 +53,7 @@ namespace CsharpBeadando
             if (adatok.Length == 1)
             {
                 //csak akkor adjuk hozzá, ha még nem volt benne a listában
-                if (lista.Contains(adatok[0]))
+                if (BenneVan(adatok[0]))
                 {
                     return;
                 }
@@ -70,7 +82,7 @@ namespace CsharpBeadando
                     foreach (var adat in adatok)
                     {
                         //csak akkor adjuk hozzá, ha még nem volt benne a listában
-                        if (lista.Contains(adat))
+                        if (BenneVan(adat))
                         {
                             continue;
                         }
@@ -85,18 +97,15 @@ namespace CsharpBeadando
         {
             foreach (var adat in adatok)
             {
-                //megkeresem a kapott adatot a listában
-                var talalat = lista.Find(adat);
-
-                //ha nincs benne a listában, continue
-                if (talalat == null)
-                {
-                    continue;
-                }
                 //ha benne van, törlöm a listából
+                if (BenneVan(adat))
+                {
+                    lista.Remove(adat);
+                }
+                //ha nincs benne a listában, continue
                 else
                 {
-                    lista.Remove(talalat);
+                    continue;
                 }
             }
         }
@@ -112,7 +121,7 @@ namespace CsharpBeadando
             var elso = lista.Find(mit);
             var masodik = lista.Find(mire);
 
-            if(elso != null && masodik != null)
+            if (elso != null && masodik != null)
             {
                 var tmp1 = elso.Value;
                 lista.AddBefore(masodik, tmp1);
@@ -124,6 +133,5 @@ namespace CsharpBeadando
             }
             return false;
         }
-
     }
 }
