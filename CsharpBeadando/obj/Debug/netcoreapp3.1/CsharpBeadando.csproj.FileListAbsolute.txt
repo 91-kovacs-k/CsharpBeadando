@@ -1,0 +1,13 @@
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\bin\Debug\netcoreapp3.1\CsharpBeadando.exe
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\bin\Debug\netcoreapp3.1\CsharpBeadando.deps.json
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\bin\Debug\netcoreapp3.1\CsharpBeadando.runtimeconfig.json
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\bin\Debug\netcoreapp3.1\CsharpBeadando.runtimeconfig.dev.json
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\bin\Debug\netcoreapp3.1\CsharpBeadando.dll
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\bin\Debug\netcoreapp3.1\CsharpBeadando.pdb
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\obj\Debug\netcoreapp3.1\CsharpBeadando.csprojAssemblyReference.cache
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\obj\Debug\netcoreapp3.1\CsharpBeadando.AssemblyInfoInputs.cache
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\obj\Debug\netcoreapp3.1\CsharpBeadando.AssemblyInfo.cs
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\obj\Debug\netcoreapp3.1\CsharpBeadando.csproj.CoreCompileInputs.cache
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\obj\Debug\netcoreapp3.1\CsharpBeadando.dll
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\obj\Debug\netcoreapp3.1\CsharpBeadando.pdb
+D:\VS Projects\C#\CsharpBeadando\CsharpBeadando\obj\Debug\netcoreapp3.1\CsharpBeadando.genruntimeconfig.cache
