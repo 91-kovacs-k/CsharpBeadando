@@ -26,6 +26,11 @@ namespace CsharpBeadando
         {
             foreach (var adat in adatok)
             {
+                //csak akkor adjuk hozzá, ha még nem volt benne a listában
+                if (lista.Contains(adat))
+                {
+                    continue;
+                }
                 lista.AddLast(adat);
             }
         }
@@ -35,6 +40,11 @@ namespace CsharpBeadando
             //ha egy paramétert kapott, akkor beszúrja az lista elejére
             if (adatok.Length == 1)
             {
+                //csak akkor adjuk hozzá, ha még nem volt benne a listában
+                if (lista.Contains(adatok[0]))
+                {
+                    return;
+                }
                 lista.AddFirst(adatok[0]);
             }
             //ha több paramétert kapott olyan sorrendben szúrja be az adatokat, ahogy kapta
@@ -59,6 +69,11 @@ namespace CsharpBeadando
                     LinkedListNode<T> Elso = lista.First;
                     foreach (var adat in adatok)
                     {
+                        //csak akkor adjuk hozzá, ha még nem volt benne a listában
+                        if (lista.Contains(adat))
+                        {
+                            continue;
+                        }
                         lista.AddBefore(Elso, adat);
                     }
                 }
@@ -66,7 +81,7 @@ namespace CsharpBeadando
         }
 
         //teendő törlése a listából
-        public void Torol(params T[] adatok)
+        public void ElemTorol(params T[] adatok)
         {
             foreach (var adat in adatok)
             {
@@ -85,5 +100,30 @@ namespace CsharpBeadando
                 }
             }
         }
+
+        //a lista törlése
+        public void ListaTorol()
+        {
+            lista.Clear();
+        }
+
+        public bool Cserel(T mit, T mire)
+        {
+            var elso = lista.Find(mit);
+            var masodik = lista.Find(mire);
+
+            if(elso != null && masodik != null)
+            {
+                var tmp1 = elso.Value;
+                lista.AddBefore(masodik, tmp1);
+                var tmp2 = masodik.Value;
+                lista.AddBefore(elso, tmp2);
+                lista.Remove(elso);
+                lista.Remove(masodik);
+                return true;
+            }
+            return false;
+        }
+
     }
 }
