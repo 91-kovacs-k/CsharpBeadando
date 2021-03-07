@@ -9,7 +9,7 @@ namespace CsharpBeadando
     {
         //a teendők tárolása LinkedList-ben
         private LinkedList<T> lista;
-        
+
         //üres konstruktor
         public Teendok()
         {
@@ -73,7 +73,7 @@ namespace CsharpBeadando
                 //megkeresem a kapott adatot a listában
                 var talalat = lista.Find(adat);
 
-                //ha nincs benne a listában, ha nincs, continue
+                //ha nincs benne a listában, continue
                 if (talalat == null)
                 {
                     continue;
@@ -85,8 +85,5 @@ namespace CsharpBeadando
                 }
             }
         }
-
-
-
     }
 }
