@@ -10,7 +10,7 @@ namespace CsharpBeadando
             LancoltLista<string> teendok = new LancoltLista<string>();
             //listához adok néhány tennivalót
             Console.WriteLine("Tennivalók hozzáadása:");
-            teendok.VegehezAd("bevásárlás", "pénz felvétel", "főzés");
+            teendok.VegehezAd("bevásárlás", "pénz felvétel", "főzés", "mosás");
             Kiir(teendok);
             //a végéhez illetve az elejére írok néhány új tennivalót
             Console.WriteLine("Tennivalók hozzáadása elejéhez, végéhez:");
@@ -42,7 +42,7 @@ namespace CsharpBeadando
             LancoltLista<int> szamok = new LancoltLista<int>();
             //listához adok néhány számot
             Console.WriteLine("Listához adok néhány számot:");
-            szamok.VegehezAd(4, 35, 12);
+            szamok.VegehezAd(4, 35, 12, 99);
             Kiir(szamok);
             //a végéhez illetve az elejére írok néhány új számot
             Console.WriteLine("Elejéhez illetve a végéhez adok néhány számot:");
